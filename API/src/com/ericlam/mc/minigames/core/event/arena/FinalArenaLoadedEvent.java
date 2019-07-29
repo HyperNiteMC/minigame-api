@@ -8,9 +8,13 @@ import javax.annotation.Nonnull;
 
 public final class FinalArenaLoadedEvent extends Event {
 
-    private final HandlerList handlerList = new HandlerList();
+    private static final HandlerList handlerList = new HandlerList();
 
     private final Arena finalArena;
+
+    public static HandlerList getHandlerList() {
+        return handlerList;
+    }
 
     public FinalArenaLoadedEvent(@Nonnull Arena finalArena) {
         this.finalArena = finalArena;

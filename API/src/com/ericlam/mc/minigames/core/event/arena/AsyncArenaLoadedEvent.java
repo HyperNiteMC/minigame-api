@@ -9,7 +9,12 @@ import javax.annotation.Nonnull;
 
 public final class AsyncArenaLoadedEvent extends Event {
 
-    private final HandlerList handlerList = new HandlerList();
+    private static final HandlerList handlerList = new HandlerList();
+
+
+    public static HandlerList getHandlerList() {
+        return handlerList;
+    }
 
     private final ImmutableList<Arena> loadedArenas;
 
