@@ -1,6 +1,5 @@
 package com.ericlam.mc.minigames.core.character;
 
-import com.google.common.collect.ImmutableList;
 import org.bukkit.entity.Player;
 
 public interface GamePlayerHandler {
@@ -11,6 +10,6 @@ public interface GamePlayerHandler {
 
     GamePlayer createGamePlayer(Player player);
 
-    boolean shouldStartGame(ImmutableList<GamePlayer> waitingGamer);
+    int requireStart();
 
 }

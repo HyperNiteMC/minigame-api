@@ -13,7 +13,7 @@ public final class CrackShotDeathEvent extends GamePlayerDeathEvent {
     private Entity bullet;
 
     public CrackShotDeathEvent(@Nullable GamePlayer killer, GamePlayer gamePlayer, InGameState state, String weaponTitle, Entity bullet) {
-        super(killer, gamePlayer, DeathCause.CRACKSHOT, state, MinigamesCore.getProperties().getMinigameConfig().getPureMessage("death-msg.action.gun"));
+        super(killer, gamePlayer, DeathCause.CRACKSHOT, state, MinigamesCore.getProperties().getMinigameConfig().getPureMessage("death-msg.action.".concat(bullet == null ? "normal" : "gun")));
         this.weaponTitle = weaponTitle;
         this.bullet = bullet;
     }

@@ -10,7 +10,7 @@ public interface SectionTask {
 
     void onFinish();
 
-    void run(long remain);
+    long run(long remain);
 
     long getTotalTime();
 
