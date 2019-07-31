@@ -18,8 +18,6 @@ public interface MinigamesAPI {
 
     GameStatsManager getGameStatsManager();
 
-    InventoryManager getInventoryManager();
-
     PlayerManager getPlayerManager();
 
     GameManager getGameManager();

@@ -75,11 +75,6 @@ public final class MinigamesCore implements MinigamesAPI, Registration, Properti
     }
 
     @Override
-    public InventoryManager getInventoryManager() {
-        return null;
-    }
-
-    @Override
     public PlayerManager getPlayerManager() {
         return null;
     }
