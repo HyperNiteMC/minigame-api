@@ -1,11 +1,27 @@
 package com.ericlam.mc.minigames.core.game;
 
-import com.ericlam.mc.minigames.core.function.Castable;
+import org.bukkit.ChatColor;
 
-public interface InGameState extends Castable<InGameState> {
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
-    String getStateName();
+public class InGameState {
 
-    String getMotd();
+    private final String stateName;
+    private final String motd;
+
+    public InGameState(@Nonnull String stateName, @Nullable String motd) {
+        this.stateName = stateName;
+        this.motd = motd;
+    }
+
+    public String getStateName() {
+        return stateName;
+    }
+
+    @Nullable
+    public String getMotd() {
+        return motd == null ? null : ChatColor.translateAlternateColorCodes('&', motd);
+    }
 
 }
