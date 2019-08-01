@@ -13,6 +13,7 @@ public class GamePlayerJoinEvent extends GamePlayerEvent {
 
     public GamePlayerJoinEvent(GamePlayer gamePlayer, @Nullable InGameState state, @Nonnull GameState gameState) {
         super(gamePlayer, state);
+        this.gameState = gameState;
     }
 
     public GameState getGameState() {
