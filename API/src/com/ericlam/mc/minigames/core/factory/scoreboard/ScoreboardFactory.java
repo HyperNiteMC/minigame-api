@@ -10,6 +10,8 @@ public interface ScoreboardFactory extends Factory<GameBoard> {
 
     ScoreboardFactory addTeamSetting(GameTeam gameTeam, Team.Option option, Team.OptionStatus status);
 
+    ScoreboardFactory addSetting(Team.Option option, Team.OptionStatus status);
+
     ScoreboardFactory setTitle(String title);
 
     ScoreboardFactory setLine(String key, String text, int score);
