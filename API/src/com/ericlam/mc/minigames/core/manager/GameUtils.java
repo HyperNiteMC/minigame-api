@@ -6,5 +6,7 @@ public interface GameUtils {
 
     String getTimeWithUnit(long sec);
 
+    String getTimer(long sec);
+
     void playSound(Player player, String[] soundString);
 }
