@@ -1,11 +1,11 @@
 package com.ericlam.mc.minigames.core.arena;
 
 import com.google.common.collect.ImmutableMap;
-import org.bukkit.GameRule;
 import org.bukkit.Location;
+import org.bukkit.World;
 
+import javax.annotation.Nonnull;
 import java.io.File;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public interface ArenaConfig {
@@ -14,7 +14,7 @@ public interface ArenaConfig {
 
     int getMaxLoadArena();
 
-    <T> Map<GameRule<T>, T> getWorldGameRule();
+    void setExtraWorldSetting(@Nonnull World world);
 
     ImmutableMap<String, Integer> getAllowWarps();
 

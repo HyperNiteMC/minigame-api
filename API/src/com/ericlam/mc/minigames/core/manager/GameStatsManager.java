@@ -4,12 +4,15 @@ import com.ericlam.mc.minigames.core.character.GamePlayer;
 import com.ericlam.mc.minigames.core.exception.gamestats.PlayerNotExistException;
 import com.ericlam.mc.minigames.core.gamestats.GameStatsEditor;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 
 import java.util.concurrent.CompletableFuture;
 
 public interface GameStatsManager {
 
     String[] getStatsInfo(GamePlayer player) throws PlayerNotExistException;
+
+    String[] getStatsInfo(Player player) throws PlayerNotExistException;
 
     void addKills(GamePlayer player, int kills);
 
