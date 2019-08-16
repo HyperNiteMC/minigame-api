@@ -1,6 +1,7 @@
 package com.ericlam.mc.minigames.core.factory.scoreboard;
 
 import com.ericlam.mc.minigames.core.character.GamePlayer;
+import com.ericlam.mc.minigames.core.character.TeamPlayer;
 import com.google.common.collect.ImmutableMap;
 
 public interface GameBoard {
@@ -8,6 +9,8 @@ public interface GameBoard {
     void setTitle(String title);
 
     void addPlayer(GamePlayer player);
+
+    void switchTeam(TeamPlayer player);
 
     void removePlayer(GamePlayer player);
 
