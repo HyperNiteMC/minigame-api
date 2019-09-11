@@ -7,7 +7,7 @@ import com.ericlam.mc.minigames.core.manager.*;
 import com.ericlam.mc.minigames.core.registable.Compulsory;
 import com.ericlam.mc.minigames.core.registable.Registration;
 import com.ericlam.mc.minigames.core.registable.Voluntary;
-import com.hypernite.mc.hnmc.core.managers.ConfigManager;
+import com.hypernite.mc.hnmc.core.managers.YamlManager;
 
 import java.util.Optional;
 
@@ -30,7 +30,7 @@ public final class MinigamesCore implements MinigamesAPI, Registration, Properti
     }
 
     @Override
-    public ConfigManager getMinigameConfig() {
+    public YamlManager getMinigameConfig() {
         return null;
     }
 

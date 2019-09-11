@@ -6,8 +6,8 @@ import com.ericlam.mc.minigames.core.game.GameState;
 import com.ericlam.mc.minigames.core.main.MinigamesCore;
 import com.ericlam.mc.minigames.core.manager.ArenaCreateManager;
 import com.hypernite.mc.hnmc.core.main.HyperNiteMC;
-import com.hypernite.mc.hnmc.core.managers.ConfigManager;
 import com.hypernite.mc.hnmc.core.managers.CoreConfig;
+import com.hypernite.mc.hnmc.core.managers.YamlManager;
 import com.hypernite.mc.hnmc.core.misc.commands.CommandNode;
 import org.apache.commons.lang.Validate;
 import org.bukkit.command.CommandSender;
@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 public abstract class ArenaCommandNode extends CommandNode {
 
-    private final ConfigManager minigameConfig;
+    private final YamlManager minigameConfig;
 
 
     public ArenaCommandNode(CommandNode parent, @Nonnull String command, String permission, @Nonnull String description, String placeholder, String... alias) {
