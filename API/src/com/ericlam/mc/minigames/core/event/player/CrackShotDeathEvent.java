@@ -8,6 +8,9 @@ import org.bukkit.entity.Entity;
 import javax.annotation.Nullable;
 import java.util.Set;
 
+/**
+ * 因 CrackShot 而死亡的遊戲玩家事件
+ */
 public final class CrackShotDeathEvent extends GamePlayerDeathEvent {
 
     private String weaponTitle;
@@ -21,21 +24,46 @@ public final class CrackShotDeathEvent extends GamePlayerDeathEvent {
         this.types = types;
     }
 
+    /**
+     * @return 傷害類型
+     * @see DamageType
+     */
     public Set<DamageType> getDamageTypes() {
         return types;
     }
 
-    public enum DamageType {
-        BACKSTAB,
-        CRITICAL,
-        HEADSHOT
-    }
-
+    /**
+     * 返回該槍械的 CrackShot Title
+     *
+     * @return 該槍械的 CrackShot Title
+     */
     public String getWeaponTitle() {
         return weaponTitle;
     }
 
+    /**
+     * 返回子彈實體
+     * @return 子彈
+     */
     public Entity getBullet() {
         return bullet;
+    }
+
+    /**
+     * 傷害類型
+     */
+    public enum DamageType {
+        /**
+         * 後刺
+         */
+        BACKSTAB,
+        /**
+         * 重擊
+         */
+        CRITICAL,
+        /**
+         * 爆頭
+         */
+        HEADSHOT
     }
 }

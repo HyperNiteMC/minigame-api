@@ -19,11 +19,22 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 場地指令接口，用於新增額外場地設置指令是掛接。
+ */
 public abstract class ArenaCommandNode extends CommandNode {
 
     private final YamlManager minigameConfig;
 
 
+    /**
+     * @param parent      父指令
+     * @param command     指令名稱
+     * @param permission  權限
+     * @param description 描述
+     * @param placeholder 參數
+     * @param alias       別稱
+     */
     public ArenaCommandNode(CommandNode parent, @Nonnull String command, String permission, @Nonnull String description, String placeholder, String... alias) {
         super(parent, command, permission, description, placeholder, alias);
         minigameConfig = MinigamesCore.getProperties().getMinigameConfig();
@@ -86,6 +97,14 @@ public abstract class ArenaCommandNode extends CommandNode {
         return null;
     }
 
+    /**
+     * 指令運行
+     * @param player 指令發送者
+     * @param list 參數
+     * @param arenaCreateManager 場地設置管理器
+     * @return 執行成功
+     * @throws ArenaNotExistException 場地不存在
+     */
     protected abstract boolean executeArenaOperation(@Nonnull Player player, @Nonnull List<String> list, @Nonnull ArenaCreateManager arenaCreateManager) throws ArenaNotExistException;
 
 

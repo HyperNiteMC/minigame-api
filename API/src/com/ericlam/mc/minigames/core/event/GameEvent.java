@@ -11,6 +11,9 @@ import org.bukkit.event.HandlerList;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+/**
+ * 遊戲事件
+ */
 public abstract class GameEvent extends Event {
 
 
@@ -31,26 +34,49 @@ public abstract class GameEvent extends Event {
         return handlerList;
     }
 
+    /**
+     * @return 場地狀態
+     */
     public InGameState getInGameState() {
         return inGameState;
     }
 
+    /**
+     *
+     * @return 遊戲狀態
+     */
     public GameState getGameState() {
         return gameState;
     }
 
+    /**
+     *
+     * @return 所有遊戲玩家
+     */
     public ImmutableList<GamePlayer> getTotalPlayers() {
         return playerManager.getTotalPlayers();
     }
 
+    /**
+     *
+     * @return 所有遊戲中的玩家
+     */
     public ImmutableList<GamePlayer> getGamingPlayer() {
         return playerManager.getGamePlayer();
     }
 
+    /**
+     *
+     * @return 所有投票等候的玩家
+     */
     public ImmutableList<GamePlayer> getWaitingPlayer() {
         return playerManager.getWaitingPlayer();
     }
 
+    /**
+     *
+     * @return 所有觀戰的玩家
+     */
     public ImmutableList<GamePlayer> getSpectators() {
         return playerManager.getSpectators();
     }

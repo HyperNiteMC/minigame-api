@@ -10,6 +10,11 @@ import org.bukkit.event.player.PlayerEvent;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+/**
+ * 遊戲玩家準備加入時觸發的事件。
+ * <p>
+ * 此事件可以被取消。當取消事件後，小遊戲系統將不會把該玩家加入為遊戲玩家。
+ */
 public final class GamePlayerPreJoinEvent extends PlayerEvent implements Cancellable {
 
     private static final HandlerList handerlist = new HandlerList();
@@ -40,10 +45,19 @@ public final class GamePlayerPreJoinEvent extends PlayerEvent implements Cancell
         this.cancelled = b;
     }
 
+    /**
+     * 獲取遊戲狀態
+     *
+     * @return 遊戲狀態
+     */
     public GameState getState() {
         return state;
     }
 
+    /**
+     * 獲取場地狀態
+     * @return 場地狀態
+     */
     @Nullable
     public InGameState getInGameState() {
         return inGameState;

@@ -5,6 +5,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 循環迭代器
+ *
+ * @param <E> 自定義類
+ */
 public final class CircularIterator<E> implements Iterator<E> {
 
     private final List<E> list;

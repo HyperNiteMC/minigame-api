@@ -11,20 +11,43 @@ import com.hypernite.mc.hnmc.core.managers.YamlManager;
 
 import java.util.Optional;
 
+/**
+ * 所有 API 的集中獲取器
+ */
 public final class MinigamesCore implements MinigamesAPI, Registration, Properties {
 
+    /**
+     * 獲取 遊戲 API
+     * <p>
+     * 注意，當必要內容尚未註冊成功時，將可能無法成功獲取API
+     * </p>
+     *
+     * @return 遊戲內 API
+     */
     public static MinigamesAPI getApi() {
         throw new RuntimeException();
     }
 
+    /**
+     * 安全地獲取 API
+     * @return 遊戲內 API
+     */
     public static Optional<MinigamesAPI> getApiSafe() {
         throw new RuntimeException();
     }
 
+    /**
+     * 獲取註冊管理器
+     * @return 註冊管理器
+     */
     public static Registration getRegistration() {
         throw new RuntimeException();
     }
 
+    /**
+     * 獲取其他設定, 包括 Config 和 工廠等等
+     * @return 設定
+     */
     public static Properties getProperties() {
         throw new RuntimeException();
     }

@@ -8,6 +8,9 @@ import com.ericlam.mc.minigames.core.manager.PlayerManager;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+/**
+ * 遊戲階段事件
+ */
 public abstract class GameSectionEvent extends GameEvent {
 
     public GameSectionEvent(@Nonnull PlayerManager playerManager, @Nullable InGameState inGameState, GameState gameState) {

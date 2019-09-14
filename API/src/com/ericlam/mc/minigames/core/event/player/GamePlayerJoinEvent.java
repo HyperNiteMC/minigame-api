@@ -7,6 +7,9 @@ import com.ericlam.mc.minigames.core.game.InGameState;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+/**
+ * 場地加入事件
+ */
 public class GamePlayerJoinEvent extends GamePlayerEvent {
 
     private GameState gameState;

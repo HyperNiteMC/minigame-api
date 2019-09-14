@@ -7,6 +7,9 @@ import com.ericlam.mc.minigames.core.manager.PlayerManager;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+/**
+ * 遊戲即將開始時被觸發
+ */
 public final class GamePreStartEvent extends GameSectionEvent {
 
     public GamePreStartEvent(@Nonnull PlayerManager playerManager, @Nullable InGameState inGameState, GameState gameState) {

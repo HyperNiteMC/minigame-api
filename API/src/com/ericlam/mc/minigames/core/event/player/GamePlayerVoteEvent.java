@@ -6,6 +6,11 @@ import org.bukkit.event.Cancellable;
 
 import javax.annotation.Nonnull;
 
+/**
+ * 遊戲玩家投票地圖事件
+ * <p>
+ * 此事件可以被取消，當事件被取消後，投票數將不會生效。
+ */
 public final class GamePlayerVoteEvent extends GamePlayerEvent implements Cancellable {
 
     private Arena voted;
@@ -17,11 +22,20 @@ public final class GamePlayerVoteEvent extends GamePlayerEvent implements Cancel
         this.cancel = false;
     }
 
+    /**
+     * 獲取投票的地圖
+     *
+     * @return 投票地圖
+     */
     public Arena getVoted() {
         return voted;
     }
 
 
+    /**
+     * 設置投票的地圖
+     * @param voted 投票地圖
+     */
     public void setVoted(Arena voted) {
         this.voted = voted;
     }
