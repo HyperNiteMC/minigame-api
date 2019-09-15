@@ -10,14 +10,6 @@ import org.bukkit.scoreboard.Team;
 public interface ScoreboardFactory extends Factory<GameBoard> {
 
     /**
-     * 添加隊伍
-     *
-     * @param team 隊伍
-     * @return this
-     */
-    ScoreboardFactory addTeam(GameTeam team);
-
-    /**
      * 添加隊伍設定
      * @param gameTeam 隊伍
      * @param option 設定

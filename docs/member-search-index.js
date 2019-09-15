@@ -76,11 +76,6 @@ memberSearchIndex = [{
 }, {
     "p": "com.ericlam.mc.minigames.core.factory.scoreboard",
     "c": "ScoreboardFactory",
-    "l": "addTeam(GameTeam)",
-    "url": "addTeam(com.ericlam.mc.minigames.core.game.GameTeam)"
-}, {
-    "p": "com.ericlam.mc.minigames.core.factory.scoreboard",
-    "c": "ScoreboardFactory",
     "l": "addTeamSetting(GameTeam, Team.Option, Team.OptionStatus)",
     "url": "addTeamSetting(com.ericlam.mc.minigames.core.game.GameTeam,org.bukkit.scoreboard.Team.Option,org.bukkit.scoreboard.Team.OptionStatus)"
 }, {
