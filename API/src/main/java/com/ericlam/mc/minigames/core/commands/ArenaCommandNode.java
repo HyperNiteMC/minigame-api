@@ -5,9 +5,9 @@ import com.ericlam.mc.minigames.core.exception.arena.create.ArenaNotExistExcepti
 import com.ericlam.mc.minigames.core.game.GameState;
 import com.ericlam.mc.minigames.core.main.MinigamesCore;
 import com.ericlam.mc.minigames.core.manager.ArenaCreateManager;
+import com.hypernite.mc.hnmc.core.config.MessageGetter;
 import com.hypernite.mc.hnmc.core.main.HyperNiteMC;
 import com.hypernite.mc.hnmc.core.managers.CoreConfig;
-import com.hypernite.mc.hnmc.core.managers.YamlManager;
 import com.hypernite.mc.hnmc.core.misc.commands.CommandNode;
 import org.apache.commons.lang.Validate;
 import org.bukkit.command.CommandSender;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  */
 public abstract class ArenaCommandNode extends CommandNode {
 
-    private final YamlManager minigameConfig;
+    private final MessageGetter messageGetter;
 
 
     /**
@@ -37,7 +37,7 @@ public abstract class ArenaCommandNode extends CommandNode {
      */
     public ArenaCommandNode(CommandNode parent, @Nonnull String command, String permission, @Nonnull String description, String placeholder, String... alias) {
         super(parent, command, permission, description, placeholder, alias);
-        minigameConfig = MinigamesCore.getProperties().getMinigameConfig();
+        messageGetter = MinigamesCore.getProperties().getMessageGetter();
     }
 
     @Override
@@ -54,14 +54,14 @@ public abstract class ArenaCommandNode extends CommandNode {
         Validate.notNull(arenaCreateManager, "Arena Create Manager is null");
 
         if (MinigamesCore.getApi().getGameManager().getGameState() != GameState.STOPPED) {
-            player.sendMessage(prefix + minigameConfig.getPureMessage("game-not-stopped"));
+            player.sendMessage(prefix + messageGetter.getPure("game-not-stopped"));
             return true;
         }
 
         try {
             return executeArenaOperation(player, list, arenaCreateManager);
         } catch (ArenaNotExistException e) {
-            player.sendMessage(prefix + minigameConfig.getPureMessage("arena.not-exist").replace("<arena>", e.getArena()));
+            player.sendMessage(prefix + messageGetter.getPure("arena.not-exist").replace("<arena>", e.getArena()));
             return true;
         }
     }
