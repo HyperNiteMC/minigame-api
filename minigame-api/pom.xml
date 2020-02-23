@@ -7,7 +7,7 @@
         <version>0.1.6</version>
     </parent>
 
-    <artifactId>API</artifactId>
+    <artifactId>minigame-api</artifactId>
 
     <build>
         <finalName>Minigames-API</finalName>
