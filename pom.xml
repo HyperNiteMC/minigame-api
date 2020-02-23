@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hypernite.mc</groupId>
-    <artifactId>Minigames-Core</artifactId>
+    <artifactId>minigames-core</artifactId>
     <version>0.1.6</version>
     <packaging>pom</packaging>
 
