@@ -22,7 +22,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.hypernite.mc:core-api:7.5.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.hypernite.mc:core-api:7.5.9" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: patched:1.15:R1" level="project" />
   </component>
 </module>
