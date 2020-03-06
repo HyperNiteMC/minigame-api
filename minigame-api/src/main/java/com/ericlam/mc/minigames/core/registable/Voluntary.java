@@ -53,6 +53,6 @@ public interface Voluntary {
      * @param slot slot
      * @param item 物品
      */
-    void addSpectatorITem(int slot, ItemStack item);
+    void addSpectatorItem(int slot, ItemStack item);
 
 }

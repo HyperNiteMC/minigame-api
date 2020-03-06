@@ -23,6 +23,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.hypernite.mc:core-api:7.5.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: redis.clients:jedis:3.1.0-m3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: patched:1.15:R1" level="project" />
   </component>
 </module>

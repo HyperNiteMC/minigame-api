@@ -12,8 +12,9 @@ public interface ScheduleManager {
 
     /**
      * 運行初始程序 (大堂倒數)
+     * @param forceStart 是否為強制開始 (無法取消 + 倒數只有十秒)
      */
-    void startFirst();
+    void startFirst(boolean forceStart);
 
     /**
      * 開始該場地狀態的程序

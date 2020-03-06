@@ -3,7 +3,7 @@
 
     <groupId>com.hypernite.mc</groupId>
     <artifactId>minigames-core</artifactId>
-    <version>0.1.8</version>
+    <version>0.1.9</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -94,6 +94,40 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.1.1</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <links>
+                            <link>https://hub.spigotmc.org/javadocs/spigot/</link>
+                            <link>https://eric2788.github.io/HNMC-Core-API/</link>
+                        </links>
+                        <javadocExecutable>C:\Program Files\Java\jdk-11.0.4\bin\javadoc.exe</javadocExecutable>
+                        <show>public</show>
+                        <linksource>true</linksource>
+                        <isOffline>false</isOffline>
+                        <encoding>UTF-8</encoding>
+                        <windowtitle>Minigames-Api</windowtitle>
+                        <doctitle>Minigames-Api v${project.version}</doctitle>
+                        <verbose>true</verbose>
+                        <author>true</author>
+                        <version>true</version>
+                        <linksource>true</linksource>
+                        <notimestamp>true</notimestamp>
+                        <bottom><![CDATA[<b>© HyperNiteMC - 2020</b>]]></bottom>
+                        <reportOutputDirectory>${project.build.directory}</reportOutputDirectory>
+                        <destDir>../docs</destDir>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
