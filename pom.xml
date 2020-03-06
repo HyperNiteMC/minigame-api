@@ -110,6 +110,7 @@
                         <links>
                             <link>https://hub.spigotmc.org/javadocs/spigot/</link>
                             <link>https://eric2788.github.io/HNMC-Core-API/</link>
+                            <link>https://guava.dev/releases/23.0/api/docs/</link>
                         </links>
                         <javadocExecutable>C:\Program Files\Java\jdk-11.0.4\bin\javadoc.exe</javadocExecutable>
                         <show>public</show>
