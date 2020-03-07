@@ -5,6 +5,7 @@ import com.ericlam.mc.minigames.core.game.GameState;
 import com.ericlam.mc.minigames.core.game.GameTeam;
 import com.ericlam.mc.minigames.core.game.InGameState;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -40,6 +41,7 @@ public interface GameManager {
      * 獲取場地狀態
      * @return 場地狀態
      */
+    @Nullable
     InGameState getInGameState();
 
     /**
