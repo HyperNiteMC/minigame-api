@@ -1,6 +1,6 @@
 # Project exclude paths
 /out/
-/.idea/
+/.idea/*
 /Plugin/*
 /minigame-api/target
 /minigame-api/dependency-reduced-pom.xml
