@@ -3,7 +3,7 @@
 
     <groupId>com.hypernite.mc</groupId>
     <artifactId>minigames-core</artifactId>
-    <version>0.1.9</version>
+    <version>0.1.11</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -14,7 +14,7 @@
     <repositories>
         <repository>
             <id>xuan</id>
-            <url>http://xuan.nctu.me:8081/repository/Maven/</url>
+            <url>https://xuan.nctu.me:8081/repository/Maven/</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
@@ -29,7 +29,7 @@
         </dependency>
         <dependency>
             <groupId>patched</groupId>
-            <artifactId>1.15</artifactId>
+            <artifactId>1.16</artifactId>
         </dependency>
     </dependencies>
 
@@ -54,7 +54,7 @@
             </dependency>
             <dependency>
                 <groupId>patched</groupId>
-                <artifactId>1.15</artifactId>
+                <artifactId>1.16</artifactId>
                 <version>R1</version>
                 <scope>provided</scope>
             </dependency>
@@ -85,7 +85,7 @@
             <dependency>
                 <groupId>com.hypernite.mc</groupId>
                 <artifactId>core-api</artifactId>
-                <version>7.5.9</version>
+                <version>7.6.3</version>
                 <scope>provided</scope>
             </dependency>
         </dependencies>
@@ -95,9 +95,16 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                        <encoding>utf-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.2.0</version>
                     <executions>
                         <execution>
                             <id>attach-javadocs</id>
@@ -112,7 +119,7 @@
                             <link>https://eric2788.github.io/HNMC-Core-API/</link>
                             <link>https://guava.dev/releases/23.0/api/docs/</link>
                         </links>
-                        <javadocExecutable>C:\Program Files\Java\jdk-11.0.4\bin\javadoc.exe</javadocExecutable>
+                        <javadocExecutable>${java.home}\bin\javadoc.exe</javadocExecutable>
                         <show>public</show>
                         <linksource>true</linksource>
                         <isOffline>false</isOffline>
@@ -131,6 +138,24 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.2.1</version>
+                    <configuration>
+                        <!-- outputDirectory>/absolute/path/to/the/output/directory</outputDirectory>
+                           <finalName>filename-of-generated-jar-file</finalName -->
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
@@ -142,7 +167,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.2.2</version>
+                    <version>3.2.3</version>
                     <executions>
                         <execution>
                             <phase>package</phase>
@@ -162,7 +187,7 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
+                <artifactId>maven-resources-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

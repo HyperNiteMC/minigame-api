@@ -27,8 +27,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var data = {"i0": 6, "i1": 6, "i2": 6, "i3": 6, "i4": 6};
+var tabs = {65535: ["t0", "All Methods"], 2: ["t2", "Instance Methods"], 4: ["t3", "Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -165,20 +165,30 @@ extends <a href="GameStats.html" title="interface in com.ericlam.mc.minigames.co
 <div class="block">設置殺敵數</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlayed(int)">setPlayed</a></span>&#8203;(int&nbsp;played)</code></th>
-<td class="colLast">
-<div class="block">設置遊玩次數</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWins(int)">setWins</a></span>&#8203;(int&nbsp;wins)</code></th>
-<td class="colLast">
-<div class="block">設置勝利數</div>
-</td>
-</tr>
+    <tr id="i2" class="altColor">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#setPlayed(int)">setPlayed</a></span>&#8203;(int&nbsp;played)</code></th>
+        <td class="colLast">
+            <div class="block">設置遊玩次數</div>
+        </td>
+    </tr>
+    <tr id="i3" class="rowColor">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setScores(double)">setScores</a></span>&#8203;(double&nbsp;scores)</code>
+        </th>
+        <td class="colLast">
+            <div class="block">設置分數</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i4">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWins(int)">setWins</a></span>&#8203;(int&nbsp;wins)</code>
+        </th>
+        <td class="colLast">
+            <div class="block">設置勝利數</div>
+        </td>
+    </tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.com.ericlam.mc.minigames.core.function.Castable">
@@ -253,19 +263,35 @@ extends <a href="GameStats.html" title="interface in com.ericlam.mc.minigames.co
 </li>
 </ul>
 <a id="setWins(int)">
-<!--   -->
+    <!--   -->
 </a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>setWins</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/gamestats/GameStatsEditor.html#line.31">setWins</a>&#8203;(int&nbsp;wins)</pre>
-<div class="block">設置勝利數</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>wins</code> - 勝數</dd>
-</dl>
-</li>
-</ul>
+    <ul class="blockList">
+        <li class="blockList">
+            <h4>setWins</h4>
+            <pre class="methodSignature">void&nbsp;<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/gamestats/GameStatsEditor.html#line.31">setWins</a>&#8203;(int&nbsp;wins)</pre>
+            <div class="block">設置勝利數</div>
+            <dl>
+                <dt><span class="paramLabel">Parameters:</span></dt>
+                <dd><code>wins</code> - 勝數</dd>
+            </dl>
+        </li>
+    </ul>
+    <a id="setScores(double)">
+        <!--   -->
+    </a>
+    <ul class="blockListLast">
+        <li class="blockList">
+            <h4>setScores</h4>
+            <pre class="methodSignature">void&nbsp;<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/gamestats/GameStatsEditor.html#line.38">setScores</a>&#8203;(double&nbsp;scores)</pre>
+            <div class="block">設置分數</div>
+            <dl>
+                <dt><span class="paramLabel">Parameters:</span></dt>
+                <dd><code>scores</code> - 分數</dd>
+            </dl>
+        </li>
+    </ul>
 </li>
 </ul>
 </section>

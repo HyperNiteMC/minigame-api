@@ -81,13 +81,31 @@ public interface GameStatsManager {
 
     /**
      * 減少玩家遊玩次數
+     *
      * @param player 玩家
      * @param played 減少
      */
     void minusPlayed(GamePlayer player, int played);
 
     /**
+     * 新增分數
+     *
+     * @param player 玩家
+     * @param scores 分數
+     */
+    void addScores(GamePlayer player, double scores);
+
+    /**
+     * 減少分數
+     *
+     * @param player 玩家
+     * @param scores 分數
+     */
+    void minusScores(GamePlayer player, double scores);
+
+    /**
      * 獲取 遊戲玩家資訊的 可編輯容器
+     *
      * @param player 玩家
      * @return 遊戲玩家資訊
      * @throws PlayerNotExistException 玩家不存在時

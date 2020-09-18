@@ -96,35 +96,49 @@
 <span class="sourceLineNo">087</span><a id="line.87">    void minusPlayed(GamePlayer player, int played);</a>
 <span class="sourceLineNo">088</span><a id="line.88"></a>
 <span class="sourceLineNo">089</span><a id="line.89">    /**</a>
-<span class="sourceLineNo">090</span><a id="line.90">     * 獲取 遊戲玩家資訊的 可編輯容器</a>
+<span class="sourceLineNo">090</span><a id="line.90">     * 新增分數</a>
 <span class="sourceLineNo">091</span><a id="line.91">     * @param player 玩家</a>
-<span class="sourceLineNo">092</span><a id="line.92">     * @return 遊戲玩家資訊</a>
-<span class="sourceLineNo">093</span><a id="line.93">     * @throws PlayerNotExistException 玩家不存在時</a>
-<span class="sourceLineNo">094</span><a id="line.94">     */</a>
-<span class="sourceLineNo">095</span><a id="line.95">    GameStatsEditor getGameStats(GamePlayer player) throws PlayerNotExistException;</a>
-<span class="sourceLineNo">096</span><a id="line.96"></a>
-<span class="sourceLineNo">097</span><a id="line.97">    /**</a>
-<span class="sourceLineNo">098</span><a id="line.98">     * 加載該玩家的遊戲資料</a>
-<span class="sourceLineNo">099</span><a id="line.99">     * @param player 玩家</a>
-<span class="sourceLineNo">100</span><a id="line.100">     * @return 異步運行</a>
-<span class="sourceLineNo">101</span><a id="line.101">     */</a>
-<span class="sourceLineNo">102</span><a id="line.102">    CompletableFuture&lt;Boolean&gt; loadGameStats(GamePlayer player);</a>
-<span class="sourceLineNo">103</span><a id="line.103"></a>
-<span class="sourceLineNo">104</span><a id="line.104">    /**</a>
-<span class="sourceLineNo">105</span><a id="line.105">     * 儲存所有玩家的遊戲資料</a>
-<span class="sourceLineNo">106</span><a id="line.106">     * @return 異步運行</a>
-<span class="sourceLineNo">107</span><a id="line.107">     */</a>
-<span class="sourceLineNo">108</span><a id="line.108">    CompletableFuture&lt;Void&gt; saveAll();</a>
-<span class="sourceLineNo">109</span><a id="line.109"></a>
-<span class="sourceLineNo">110</span><a id="line.110">    /**</a>
-<span class="sourceLineNo">111</span><a id="line.111">     * 保存單獨玩家的遊戲資料</a>
-<span class="sourceLineNo">112</span><a id="line.112">     * @param player 玩家</a>
-<span class="sourceLineNo">113</span><a id="line.113">     * @return 異步運行</a>
-<span class="sourceLineNo">114</span><a id="line.114">     * @throws PlayerNotExistException 玩家不存在時</a>
+<span class="sourceLineNo">092</span><a id="line.92">     * @param scores 分數</a>
+<span class="sourceLineNo">093</span><a id="line.93">     */</a>
+<span class="sourceLineNo">094</span><a id="line.94">    void addScores(GamePlayer player, double scores);</a>
+<span class="sourceLineNo">095</span><a id="line.95"></a>
+<span class="sourceLineNo">096</span><a id="line.96">    /**</a>
+<span class="sourceLineNo">097</span><a id="line.97">     * 減少分數</a>
+<span class="sourceLineNo">098</span><a id="line.98">     * @param player 玩家</a>
+<span class="sourceLineNo">099</span><a id="line.99">     * @param scores 分數</a>
+<span class="sourceLineNo">100</span><a id="line.100">     */</a>
+<span class="sourceLineNo">101</span><a id="line.101">    void minusScores(GamePlayer player, double scores);</a>
+<span class="sourceLineNo">102</span><a id="line.102"></a>
+<span class="sourceLineNo">103</span><a id="line.103">    /**</a>
+<span class="sourceLineNo">104</span><a id="line.104">     * 獲取 遊戲玩家資訊的 可編輯容器</a>
+<span class="sourceLineNo">105</span><a id="line.105">     * @param player 玩家</a>
+<span class="sourceLineNo">106</span><a id="line.106">     * @return 遊戲玩家資訊</a>
+<span class="sourceLineNo">107</span><a id="line.107">     * @throws PlayerNotExistException 玩家不存在時</a>
+<span class="sourceLineNo">108</span><a id="line.108">     */</a>
+<span class="sourceLineNo">109</span><a id="line.109">    GameStatsEditor getGameStats(GamePlayer player) throws PlayerNotExistException;</a>
+<span class="sourceLineNo">110</span><a id="line.110"></a>
+<span class="sourceLineNo">111</span><a id="line.111">    /**</a>
+<span class="sourceLineNo">112</span><a id="line.112">     * 加載該玩家的遊戲資料</a>
+<span class="sourceLineNo">113</span><a id="line.113">     * @param player 玩家</a>
+<span class="sourceLineNo">114</span><a id="line.114">     * @return 異步運行</a>
 <span class="sourceLineNo">115</span><a id="line.115">     */</a>
-<span class="sourceLineNo">116</span><a id="line.116">    CompletableFuture&lt;Void&gt; savePlayer(OfflinePlayer player) throws PlayerNotExistException;</a>
+<span class="sourceLineNo">116</span><a id="line.116">    CompletableFuture&lt;Boolean&gt; loadGameStats(GamePlayer player);</a>
 <span class="sourceLineNo">117</span><a id="line.117"></a>
-<span class="sourceLineNo">118</span><a id="line.118">}</a>
+<span class="sourceLineNo">118</span><a id="line.118">    /**</a>
+<span class="sourceLineNo">119</span><a id="line.119">     * 儲存所有玩家的遊戲資料</a>
+<span class="sourceLineNo">120</span><a id="line.120">     * @return 異步運行</a>
+<span class="sourceLineNo">121</span><a id="line.121">     */</a>
+<span class="sourceLineNo">122</span><a id="line.122">    CompletableFuture&lt;Void&gt; saveAll();</a>
+<span class="sourceLineNo">123</span><a id="line.123"></a>
+<span class="sourceLineNo">124</span><a id="line.124">    /**</a>
+<span class="sourceLineNo">125</span><a id="line.125">     * 保存單獨玩家的遊戲資料</a>
+<span class="sourceLineNo">126</span><a id="line.126">     * @param player 玩家</a>
+<span class="sourceLineNo">127</span><a id="line.127">     * @return 異步運行</a>
+<span class="sourceLineNo">128</span><a id="line.128">     * @throws PlayerNotExistException 玩家不存在時</a>
+<span class="sourceLineNo">129</span><a id="line.129">     */</a>
+<span class="sourceLineNo">130</span><a id="line.130">    CompletableFuture&lt;Void&gt; savePlayer(OfflinePlayer player) throws PlayerNotExistException;</a>
+<span class="sourceLineNo">131</span><a id="line.131"></a>
+<span class="sourceLineNo">132</span><a id="line.132">}</a>
 
 
 

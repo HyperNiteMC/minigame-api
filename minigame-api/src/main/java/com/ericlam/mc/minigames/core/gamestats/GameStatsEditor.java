@@ -26,8 +26,17 @@ public interface GameStatsEditor extends GameStats {
 
     /**
      * 設置勝利數
+     *
      * @param wins 勝數
      */
     void setWins(int wins);
+
+
+    /**
+     * 設置分數
+     *
+     * @param scores 分數
+     */
+    void setScores(double scores);
 
 }

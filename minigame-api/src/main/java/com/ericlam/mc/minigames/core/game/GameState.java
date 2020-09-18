@@ -37,7 +37,7 @@ public enum GameState {
      */
     STOPPED(null);
 
-    private String motd;
+    private final String motd;
 
     GameState(final String motd) {
         this.motd = motd;
