@@ -125,6 +125,11 @@ memberSearchIndex = [{
     "url": "%3Cinit%3E(java.lang.String)"
 }, {
     "p": "com.ericlam.mc.minigames.core.exception.arena.create",
+    "c": "ArenaNotBackupException",
+    "l": "ArenaNotBackupException(String)",
+    "url": "%3Cinit%3E(java.lang.String)"
+}, {
+    "p": "com.ericlam.mc.minigames.core.exception.arena.create",
     "c": "ArenaNotExistException",
     "l": "ArenaNotExistException(String)",
     "url": "%3Cinit%3E(java.lang.String)"
@@ -147,6 +152,16 @@ memberSearchIndex = [{
     "p": "com.ericlam.mc.minigames.core.event.player",
     "c": "CrackShotDeathEvent.DamageType",
     "l": "BACKSTAB"
+}, {
+    "p": "com.ericlam.mc.minigames.core.manager",
+    "c": "ArenaCreateManager",
+    "l": "backupArena(String)",
+    "url": "backupArena(java.lang.String)"
+}, {
+    "p": "com.ericlam.mc.minigames.core.exception.arena.create",
+    "c": "BackupNotAllowedException",
+    "l": "BackupNotAllowedException(String)",
+    "url": "%3Cinit%3E(java.lang.String)"
 }, {
     "p": "com.ericlam.mc.minigames.core.factory",
     "c": "Factory",

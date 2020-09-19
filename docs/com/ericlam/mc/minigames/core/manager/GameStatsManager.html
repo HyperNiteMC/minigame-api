@@ -19,13 +19,12 @@
 </head>
 <body>
 <script type="text/javascript"><!--
-    try {
-        if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="GameStatsManager (Minigames-Api)";
-        }
+try {
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title = "GameStatsManager (Minigames-Api)";
     }
-    catch(err) {
-    }
+} catch (err) {
+}
 //-->
 var data = {
     "i0": 6,
@@ -171,15 +170,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">增加玩家死數</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addKills(com.ericlam.mc.minigames.core.character.GamePlayer,int)">addKills</a></span>&#8203;(<a href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player,
-        int&nbsp;kills)</code></th>
-<td class="colLast">
-<div class="block">增加殺數</div>
-</td>
-</tr>
-    <tr id="i2" class="altColor">
+    <tr id="i1" class="rowColor">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#addKills(com.ericlam.mc.minigames.core.character.GamePlayer,int)">addKills</a></span>&#8203;(<a
+                href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player,
+            int&nbsp;kills)</code></th>
+        <td class="colLast">
+            <div class="block">增加殺數</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i2">
         <td class="colFirst"><code>void</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
                 href="#addPlayed(com.ericlam.mc.minigames.core.character.GamePlayer,int)">addPlayed</a></span>&#8203;(<a
@@ -189,7 +190,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             <div class="block">增加玩家遊玩次數</div>
         </td>
     </tr>
-    <tr id="i3" class="rowColor">
+    <tr class="rowColor" id="i3">
         <td class="colFirst"><code>void</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
                 href="#addScores(com.ericlam.mc.minigames.core.character.GamePlayer,double)">addScores</a></span>&#8203;(<a
@@ -222,9 +223,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         </td>
     </tr>
     <tr class="altColor" id="i6">
-        <td class="colFirst"><code><a
-                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
-                title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                                      title="class or interface in java.lang">String</a>[]</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
                 href="#getStatsInfo(com.ericlam.mc.minigames.core.character.GamePlayer)">getStatsInfo</a></span>&#8203;(<a
                 href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)</code>
@@ -234,23 +235,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         </td>
     </tr>
     <tr class="rowColor" id="i7">
-        <td class="colFirst"><code><a
-                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
-                title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                                      title="class or interface in java.lang">String</a>[]</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
-                href="#getStatsInfo(org.bukkit.entity.Player)">getStatsInfo</a></span>&#8203;(<a
-                href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true"
-                title="class or interface in org.bukkit.entity" class="externalLink">Player</a>&nbsp;player)</code></th>
+                href="#getStatsInfo(org.bukkit.entity.Player)">getStatsInfo</a></span>&#8203;(<a class="externalLink"
+                                                                                                 href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true"
+                                                                                                 title="class or interface in org.bukkit.entity">Player</a>&nbsp;player)</code>
+        </th>
         <td class="colLast">
             <div class="block">獲取遊戲玩家資訊</div>
         </td>
     </tr>
     <tr class="altColor" id="i8">
-        <td class="colFirst"><code><a
-                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
-                title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                      title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+                class="externalLink"
                 href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
-                title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</code></td>
+                title="class or interface in java.lang">Boolean</a>&gt;</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
                 href="#loadGameStats(com.ericlam.mc.minigames.core.character.GamePlayer)">loadGameStats</a></span>&#8203;(<a
                 href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)</code>
@@ -310,11 +313,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         </td>
     </tr>
     <tr class="altColor" id="i14">
-        <td class="colFirst"><code><a
-                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
-                title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                      title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+                class="externalLink"
                 href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Void.html?is-external=true"
-                title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
+                title="class or interface in java.lang">Void</a>&gt;</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
                 href="#saveAll()">saveAll</a></span>()</code></th>
         <td class="colLast">
@@ -322,15 +326,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         </td>
     </tr>
     <tr class="rowColor" id="i15">
-        <td class="colFirst"><code><a
-                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
-                title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                      title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+                class="externalLink"
                 href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Void.html?is-external=true"
-                title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
+                title="class or interface in java.lang">Void</a>&gt;</code></td>
         <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
-                href="#savePlayer(org.bukkit.OfflinePlayer)">savePlayer</a></span>&#8203;(<a
-                href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/OfflinePlayer.html?is-external=true"
-                title="class or interface in org.bukkit" class="externalLink">OfflinePlayer</a>&nbsp;player)</code></th>
+                href="#savePlayer(org.bukkit.OfflinePlayer)">savePlayer</a></span>&#8203;(<a class="externalLink"
+                                                                                             href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/OfflinePlayer.html?is-external=true"
+                                                                                             title="class or interface in org.bukkit">OfflinePlayer</a>&nbsp;player)</code>
+        </th>
         <td class="colLast">
             <div class="block">保存單獨玩家的遊戲資料</div>
         </td>
@@ -502,14 +508,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="minusPlayed(com.ericlam.mc.minigames.core.character.GamePlayer,int)">
-<!--   -->
-</a>
+    <a id="minusPlayed(com.ericlam.mc.minigames.core.character.GamePlayer,int)">
+        <!--   -->
+    </a>
     <ul class="blockList">
         <li class="blockList">
             <h4>minusPlayed</h4>
             <pre class="methodSignature">void&nbsp;<a
-                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.87">minusPlayed</a>&#8203;(<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.88">minusPlayed</a>&#8203;(<a
                     href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player,
                  int&nbsp;played)</pre>
             <div class="block">減少玩家遊玩次數</div>
@@ -527,7 +533,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         <li class="blockList">
             <h4>addScores</h4>
             <pre class="methodSignature">void&nbsp;<a
-                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.94">addScores</a>&#8203;(<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.96">addScores</a>&#8203;(<a
                     href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player,
                double&nbsp;scores)</pre>
             <div class="block">新增分數</div>
@@ -545,7 +551,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
         <li class="blockList">
             <h4>minusScores</h4>
             <pre class="methodSignature">void&nbsp;<a
-                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.101">minusScores</a>&#8203;(<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.104">minusScores</a>&#8203;(<a
                     href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player,
                  double&nbsp;scores)</pre>
             <div class="block">減少分數</div>
@@ -564,20 +570,23 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             <h4>getGameStats</h4>
             <pre class="methodSignature"><a href="../gamestats/GameStatsEditor.html"
                                             title="interface in com.ericlam.mc.minigames.core.gamestats">GameStatsEditor</a>&nbsp;<a
-                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.109">getGameStats</a>&#8203;(<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.113">getGameStats</a>&#8203;(<a
                     href="../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)
                       throws <a href="../exception/gamestats/PlayerNotExistException.html"
                                 title="class in com.ericlam.mc.minigames.core.exception.gamestats">PlayerNotExistException</a></pre>
-<div class="block">獲取 遊戲玩家資訊的 可編輯容器</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>player</code> - 玩家</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>遊戲玩家資訊</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../exception/gamestats/PlayerNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.gamestats">PlayerNotExistException</a></code> - 玩家不存在時</dd>
-</dl>
-</li>
+            <div class="block">獲取 遊戲玩家資訊的 可編輯容器</div>
+            <dl>
+                <dt><span class="paramLabel">Parameters:</span></dt>
+                <dd><code>player</code> - 玩家</dd>
+                <dt><span class="returnLabel">Returns:</span></dt>
+                <dd>遊戲玩家資訊</dd>
+                <dt><span class="throwsLabel">Throws:</span></dt>
+                <dd><code><a href="../exception/gamestats/PlayerNotExistException.html"
+                             title="class in com.ericlam.mc.minigames.core.exception.gamestats">PlayerNotExistException</a></code>
+                    - 玩家不存在時
+                </dd>
+            </dl>
+        </li>
 </ul>
 <a id="loadGameStats(com.ericlam.mc.minigames.core.character.GamePlayer)">
 <!--   -->
@@ -591,7 +600,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             class="externalLink"
             href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
             title="class or interface in java.lang">Boolean</a>&gt;&nbsp;<a
-            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.116">loadGameStats</a>&#8203;(<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.120">loadGameStats</a>&#8203;(<a
             href="../character/GamePlayer.html"
             title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)</pre>
 <div class="block">加載該玩家的遊戲資料</div>
@@ -615,7 +624,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             class="externalLink"
             href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Void.html?is-external=true"
             title="class or interface in java.lang">Void</a>&gt;&nbsp;<a
-            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.122">saveAll</a>()</pre>
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.126">saveAll</a>()</pre>
 <div class="block">儲存所有玩家的遊戲資料</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -635,7 +644,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
             class="externalLink"
             href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Void.html?is-external=true"
             title="class or interface in java.lang">Void</a>&gt;&nbsp;<a
-            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.130">savePlayer</a>&#8203;(<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/GameStatsManager.html#line.134">savePlayer</a>&#8203;(<a
             class="externalLink"
             href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/OfflinePlayer.html?is-external=true"
             title="class or interface in org.bukkit">OfflinePlayer</a>&nbsp;player)

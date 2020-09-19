@@ -27,8 +27,27 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var data = {
+    "i0": 6,
+    "i1": 6,
+    "i2": 6,
+    "i3": 6,
+    "i4": 6,
+    "i5": 6,
+    "i6": 6,
+    "i7": 6,
+    "i8": 6,
+    "i9": 6,
+    "i10": 6,
+    "i11": 6,
+    "i12": 6,
+    "i13": 6,
+    "i14": 6,
+    "i15": 6,
+    "i16": 6,
+    "i17": 6
+};
+var tabs = {65535: ["t0", "All Methods"], 2: ["t2", "Instance Methods"], 4: ["t3", "Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -124,7 +143,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<pre>public interface <a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.18">ArenaCreateManager</a></pre>
+    <pre>public interface <a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.19">ArenaCreateManager</a></pre>
 <div class="block">場地設置管理器</div>
 </li>
 </ul>
@@ -154,127 +174,212 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">新增場地描述</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addSpawn(java.lang.String,java.lang.String,org.bukkit.Location)">addSpawn</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp,
-        <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Location.html?is-external=true" title="class or interface in org.bukkit" class="externalLink">Location</a>&nbsp;location)</code></th>
-<td class="colLast">
-<div class="block">添加位置</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createArena(java.lang.String,org.bukkit.entity.Player)">createArena</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
-           <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true" title="class or interface in org.bukkit.entity" class="externalLink">Player</a>&nbsp;player)</code></th>
-<td class="colLast">
-<div class="block">創建場地</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createWarp(java.lang.String,java.lang.String)">createWarp</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
-<td class="colLast">
-<div class="block">新增地標</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteArena(java.lang.String)">deleteArena</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">刪除場地</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getArenaInfo(java.lang.String)">getArenaInfo</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">獲取場地資訊</div>
-</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getArenaList()">getArenaList</a></span>()</code></th>
-<td class="colLast">
-<div class="block">獲取所有場地列表</div>
-</td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getArenasFromWorld(org.bukkit.World)">getArenasFromWorld</a></span>&#8203;(<a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/World.html?is-external=true" title="class or interface in org.bukkit" class="externalLink">World</a>&nbsp;world)</code></th>
-<td class="colLast">
-<div class="block">獲取該世界內存在的場地列</div>
-</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="../arena/CreateArena.html" title="interface in com.ericlam.mc.minigames.core.arena">CreateArena</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCreateArena(java.lang.String)">getCreateArena</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">獲取該場地的編輯容器</div>
-</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWarpList(java.lang.String)">getWarpList</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">獲取地標列表</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeDescriptionLine(java.lang.String)">removeDescriptionLine</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">刪除上一個場地描述</div>
-</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeSpawn(java.lang.String,java.lang.String)">removeSpawn</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
-<td class="colLast">
-<div class="block">刪除上一個位置</div>
-</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeWarp(java.lang.String,java.lang.String)">removeWarp</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
-<td class="colLast">
-<div class="block">刪除地標</div>
-</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveArena(java.lang.String)">saveArena</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
-<td class="colLast">
-<div class="block">保存場地</div>
-</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAuthor(java.lang.String,java.lang.String)">setAuthor</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;author)</code></th>
-<td class="colLast">
-<div class="block">設置作者</div>
-</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDisplayName(java.lang.String,java.lang.String)">setDisplayName</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-              <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;displayName)</code></th>
-<td class="colLast">
-<div class="block">設置顯示名稱</div>
-</td>
-</tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setName(java.lang.String,java.lang.String)">setName</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;newName)</code></th>
-<td class="colLast">
-<div class="block">設置場地名稱</div>
-</td>
-</tr>
+    <tr id="i1" class="rowColor">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#addSpawn(java.lang.String,java.lang.String,org.bukkit.Location)">addSpawn</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp,
+            <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Location.html?is-external=true"
+               title="class or interface in org.bukkit" class="externalLink">Location</a>&nbsp;location)</code></th>
+        <td class="colLast">
+            <div class="block">添加位置</div>
+        </td>
+    </tr>
+    <tr id="i2" class="altColor">
+        <td class="colFirst"><code><a class="externalLink"
+                                      href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                      title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+                class="externalLink"
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html?is-external=true"
+                title="class or interface in java.io">File</a>&gt;</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#backupArena(java.lang.String)">backupArena</a></span>&#8203;(<a
+                class="externalLink"
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">&nbsp;</td>
+    </tr>
+    <tr class="rowColor" id="i3">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#createArena(java.lang.String,org.bukkit.entity.Player)">createArena</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+            <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true"
+               title="class or interface in org.bukkit.entity" class="externalLink">Player</a>&nbsp;player)</code></th>
+        <td class="colLast">
+            <div class="block">創建場地</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i4">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#createWarp(java.lang.String,java.lang.String)">createWarp</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
+        <td class="colLast">
+            <div class="block">新增地標</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i5">
+        <td class="colFirst"><code><a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteArena(java.lang.String)">deleteArena</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">刪除場地</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i6">
+        <td class="colFirst"><code><a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getArenaInfo(java.lang.String)">getArenaInfo</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">獲取場地資訊</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i7">
+        <td class="colFirst"><code><a
+                href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true"
+                title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a
+                href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>&gt;</code>
+        </td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getArenaList()">getArenaList</a></span>()</code>
+        </th>
+        <td class="colLast">
+            <div class="block">獲取所有場地列表</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i8">
+        <td class="colFirst"><code><a href="../arena/Arena.html"
+                                      title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>[]</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#getArenasFromWorld(org.bukkit.World)">getArenasFromWorld</a></span>&#8203;(<a
+                href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/World.html?is-external=true"
+                title="class or interface in org.bukkit" class="externalLink">World</a>&nbsp;world)</code></th>
+        <td class="colLast">
+            <div class="block">獲取該世界內存在的場地列</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i9">
+        <td class="colFirst"><code><a href="../arena/CreateArena.html"
+                                      title="interface in com.ericlam.mc.minigames.core.arena">CreateArena</a></code>
+        </td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#getCreateArena(java.lang.String)">getCreateArena</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">獲取該場地的編輯容器</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i10">
+        <td class="colFirst"><code><a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true"
+                title="class or interface in java.util" class="externalLink">List</a>&lt;<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWarpList(java.lang.String)">getWarpList</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">獲取地標列表</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i11">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#removeDescriptionLine(java.lang.String)">removeDescriptionLine</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">刪除上一個場地描述</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i12">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#removeSpawn(java.lang.String,java.lang.String)">removeSpawn</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
+        <td class="colLast">
+            <div class="block">刪除上一個位置</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i13">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#removeWarp(java.lang.String,java.lang.String)">removeWarp</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)</code></th>
+        <td class="colLast">
+            <div class="block">刪除地標</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i14">
+        <td class="colFirst"><code><a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveArena(java.lang.String)">saveArena</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)</code></th>
+        <td class="colLast">
+            <div class="block">保存場地</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i15">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#setAuthor(java.lang.String,java.lang.String)">setAuthor</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;author)</code></th>
+        <td class="colLast">
+            <div class="block">設置作者</div>
+        </td>
+    </tr>
+    <tr class="altColor" id="i16">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#setDisplayName(java.lang.String,java.lang.String)">setDisplayName</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;displayName)</code></th>
+        <td class="colLast">
+            <div class="block">設置顯示名稱</div>
+        </td>
+    </tr>
+    <tr class="rowColor" id="i17">
+        <td class="colFirst"><code>void</code></td>
+        <th class="colSecond" scope="row"><code><span class="memberNameLink"><a
+                href="#setName(java.lang.String,java.lang.String)">setName</a></span>&#8203;(<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+               title="class or interface in java.lang" class="externalLink">String</a>&nbsp;newName)</code></th>
+        <td class="colLast">
+            <div class="block">設置場地名稱</div>
+        </td>
+    </tr>
 </table>
 </li>
 </ul>
@@ -298,9 +403,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>setAuthor</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.27">setAuthor</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;author)
-        throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.28">setAuthor</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                  title="class or interface in java.lang" class="externalLink">String</a>&nbsp;author)
+        throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                  title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">設置作者</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -317,9 +428,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>setDisplayName</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.35">setDisplayName</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;displayName)
-             throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.36">setDisplayName</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                       title="class or interface in java.lang" class="externalLink">String</a>&nbsp;displayName)
+             throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                       title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">設置顯示名稱</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -336,10 +453,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>setName</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.44">setName</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;newName)
-      throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-             <a href="../exception/arena/create/ArenaNameExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNameExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.45">setName</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                title="class or interface in java.lang" class="externalLink">String</a>&nbsp;newName)
+      throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+             <a href="../exception/arena/create/ArenaNameExistException.html"
+                title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNameExistException</a></pre>
 <div class="block">設置場地名稱</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -357,12 +481,21 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addSpawn</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.55">addSpawn</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-              <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp,
-              <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Location.html?is-external=true" title="class or interface in org.bukkit" class="externalLink">Location</a>&nbsp;location)
-       throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-              <a href="../exception/arena/create/WarpNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a>,
-              <a href="../exception/arena/create/LocationMaxReachedException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">LocationMaxReachedException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.56">addSpawn</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+              <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                 title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp,
+              <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Location.html?is-external=true"
+                 title="class or interface in org.bukkit" class="externalLink">Location</a>&nbsp;location)
+       throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                 title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+              <a href="../exception/arena/create/WarpNotExistException.html"
+                 title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a>,
+              <a href="../exception/arena/create/LocationMaxReachedException.html"
+                 title="class in com.ericlam.mc.minigames.core.exception.arena.create">LocationMaxReachedException</a></pre>
 <div class="block">添加位置</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -382,11 +515,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>removeSpawn</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.65">removeSpawn</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
-          throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-                 <a href="../exception/arena/create/WarpNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a>,
-                 <a href="../exception/arena/create/NoMoreLocationException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">NoMoreLocationException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.66">removeSpawn</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                    title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
+          throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                    title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+                 <a href="../exception/arena/create/WarpNotExistException.html"
+                    title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a>,
+                 <a href="../exception/arena/create/NoMoreLocationException.html"
+                    title="class in com.ericlam.mc.minigames.core.exception.arena.create">NoMoreLocationException</a></pre>
 <div class="block">刪除上一個位置</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -405,11 +546,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>createWarp</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.75">createWarp</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
-         throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-                <a href="../exception/arena/create/WarpExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpExistException</a>,
-                <a href="../exception/arena/create/IllegalWarpException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">IllegalWarpException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.76">createWarp</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                   title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
+         throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                   title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+                <a href="../exception/arena/create/WarpExistException.html"
+                   title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpExistException</a>,
+                <a href="../exception/arena/create/IllegalWarpException.html"
+                   title="class in com.ericlam.mc.minigames.core.exception.arena.create">IllegalWarpException</a></pre>
 <div class="block">新增地標</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -428,10 +577,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>removeWarp</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.84">removeWarp</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
-         throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-                <a href="../exception/arena/create/WarpNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.85">removeWarp</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                   title="class or interface in java.lang" class="externalLink">String</a>&nbsp;warp)
+         throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                   title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+                <a href="../exception/arena/create/WarpNotExistException.html"
+                   title="class in com.ericlam.mc.minigames.core.exception.arena.create">WarpNotExistException</a></pre>
 <div class="block">刪除地標</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -449,31 +605,102 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>saveArena</h4>
-<pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.94">saveArena</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-                              throws <a href="../exception/arena/create/SetUpNotFinishException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">SetUpNotFinishException</a>,
-                                     <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
-                                     <a href="../exception/arena/create/ArenaUnchangedExcpetion.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaUnchangedExcpetion</a></pre>
-<div class="block">保存場地</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>arena</code> - 場地</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>異步加載</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../exception/arena/create/SetUpNotFinishException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">SetUpNotFinishException</a></code> - 設置尚未完成時</dd>
-<dd><code><a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></code> - 場地不存在時</dd>
-<dd><code><a href="../exception/arena/create/ArenaUnchangedExcpetion.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaUnchangedExcpetion</a></code> - 場地沒有被變更時</dd>
-</dl>
+    <pre class="methodSignature"><a class="externalLink"
+                                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                    title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
+            title="class or interface in java.lang">Boolean</a>&gt;&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.96">saveArena</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena)
+                              throws <a href="../exception/arena/create/SetUpNotFinishException.html"
+                                        title="class in com.ericlam.mc.minigames.core.exception.arena.create">SetUpNotFinishException</a>,
+                                     <a href="../exception/arena/create/ArenaNotExistException.html"
+                                        title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+                                     <a href="../exception/arena/create/ArenaUnchangedExcpetion.html"
+                                        title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaUnchangedExcpetion</a>,
+                                     <a href="../exception/arena/create/ArenaNotBackupException.html"
+                                        title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotBackupException</a></pre>
+    <div class="block">保存場地</div>
+    <dl>
+        <dt><span class="paramLabel">Parameters:</span></dt>
+        <dd><code>arena</code> - 場地</dd>
+        <dt><span class="returnLabel">Returns:</span></dt>
+        <dd>異步保存</dd>
+        <dt><span class="throwsLabel">Throws:</span></dt>
+        <dd><code><a href="../exception/arena/create/SetUpNotFinishException.html"
+                     title="class in com.ericlam.mc.minigames.core.exception.arena.create">SetUpNotFinishException</a></code>
+            - 設置尚未完成時
+        </dd>
+        <dd><code><a href="../exception/arena/create/ArenaNotExistException.html"
+                     title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></code>
+            - 場地不存在時
+        </dd>
+        <dd><code><a href="../exception/arena/create/ArenaUnchangedExcpetion.html"
+                     title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaUnchangedExcpetion</a></code>
+            - 場地沒有被變更時
+        </dd>
+        <dd><code><a href="../exception/arena/create/ArenaNotBackupException.html"
+                     title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotBackupException</a></code>
+            - 場地尚未備份時
+        </dd>
+    </dl>
 </li>
 </ul>
-<a id="getArenaInfo(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getArenaInfo</h4>
-<pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.102">getArenaInfo</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-               throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <a id="backupArena(java.lang.String)">
+        <!--   -->
+    </a>
+    <ul class="blockList">
+        <li class="blockList">
+            <h4>backupArena</h4>
+            <pre class="methodSignature"><a class="externalLink"
+                                            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                            title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+                    class="externalLink"
+                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html?is-external=true"
+                    title="class or interface in java.io">File</a>&gt;&nbsp;<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.106">backupArena</a>&#8203;(<a
+                    class="externalLink"
+                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                    title="class or interface in java.lang">String</a>&nbsp;arena)
+                             throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                                       title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a>,
+                                    <a href="../exception/arena/create/BackupNotAllowedException.html"
+                                       title="class in com.ericlam.mc.minigames.core.exception.arena.create">BackupNotAllowedException</a></pre>
+            <dl>
+                <dt><span class="paramLabel">Parameters:</span></dt>
+                <dd><code>arena</code> - 場地</dd>
+                <dt><span class="returnLabel">Returns:</span></dt>
+                <dd>異步備份地圖</dd>
+                <dt><span class="throwsLabel">Throws:</span></dt>
+                <dd><code><a href="../exception/arena/create/ArenaNotExistException.html"
+                             title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></code>
+                    - 場地不存在時
+                </dd>
+                <dd><code><a href="../exception/arena/create/BackupNotAllowedException.html"
+                             title="class in com.ericlam.mc.minigames.core.exception.arena.create">BackupNotAllowedException</a></code>
+                    - 遊戲場地恢復機制未被啟用時
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <a id="getArenaInfo(java.lang.String)">
+        <!--   -->
+    </a>
+    <ul class="blockList">
+        <li class="blockList">
+            <h4>getArenaInfo</h4>
+            <pre class="methodSignature"><a class="externalLink"
+                                            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                                            title="class or interface in java.lang">String</a>[]&nbsp;<a
+                    href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.114">getArenaInfo</a>&#8203;(<a
+                    class="externalLink"
+                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                    title="class or interface in java.lang">String</a>&nbsp;arena)
+               throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                         title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">獲取場地資訊</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -491,8 +718,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteArena</h4>
-<pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">CompletableFuture</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink">Boolean</a>&gt;&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.110">deleteArena</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-                                throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature"><a class="externalLink"
+                                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html?is-external=true"
+                                    title="class or interface in java.util.concurrent">CompletableFuture</a>&lt;<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html?is-external=true"
+            title="class or interface in java.lang">Boolean</a>&gt;&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.122">deleteArena</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena)
+                                throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                                          title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">刪除場地</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -510,9 +747,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>createArena</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.118">createArena</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
-                 <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true" title="class or interface in org.bukkit.entity" class="externalLink">Player</a>&nbsp;player)
-          throws <a href="../exception/arena/create/ArenaExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.130">createArena</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;name,
+                 <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html?is-external=true"
+                    title="class or interface in org.bukkit.entity" class="externalLink">Player</a>&nbsp;player)
+          throws <a href="../exception/arena/create/ArenaExistException.html"
+                    title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaExistException</a></pre>
 <div class="block">創建場地</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -529,7 +772,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getArenasFromWorld</h4>
-<pre class="methodSignature"><a href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>[]&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.125">getArenasFromWorld</a>&#8203;(<a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/World.html?is-external=true" title="class or interface in org.bukkit" class="externalLink">World</a>&nbsp;world)</pre>
+    <pre class="methodSignature"><a href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>[]&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.137">getArenasFromWorld</a>&#8203;(<a
+            class="externalLink" href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/World.html?is-external=true"
+            title="class or interface in org.bukkit">World</a>&nbsp;world)</pre>
 <div class="block">獲取該世界內存在的場地列</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -545,7 +791,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getArenaList</h4>
-<pre class="methodSignature"><a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true" title="class or interface in com.google.common.collect" class="externalLink">ImmutableList</a>&lt;<a href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>&gt;&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.131">getArenaList</a>()</pre>
+    <pre class="methodSignature"><a class="externalLink"
+                                    href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ImmutableList.html?is-external=true"
+                                    title="class or interface in com.google.common.collect">ImmutableList</a>&lt;<a
+            href="../arena/Arena.html" title="interface in com.ericlam.mc.minigames.core.arena">Arena</a>&gt;&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.143">getArenaList</a>()</pre>
 <div class="block">獲取所有場地列表</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -559,8 +809,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getWarpList</h4>
-<pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.139">getWarpList</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-                  throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature"><a class="externalLink"
+                                    href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true"
+                                    title="class or interface in java.util">List</a>&lt;<a class="externalLink"
+                                                                                           href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                                                                                           title="class or interface in java.lang">String</a>&gt;&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.151">getWarpList</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena)
+                  throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                            title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">獲取地標列表</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -578,8 +837,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getCreateArena</h4>
-<pre class="methodSignature"><a href="../arena/CreateArena.html" title="interface in com.ericlam.mc.minigames.core.arena">CreateArena</a>&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.147">getCreateArena</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-                    throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature"><a href="../arena/CreateArena.html"
+                                    title="interface in com.ericlam.mc.minigames.core.arena">CreateArena</a>&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.159">getCreateArena</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena)
+                    throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                              title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">獲取該場地的編輯容器</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -597,9 +862,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addDescriptionLine</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.155">addDescriptionLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena,
-                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)
-                 throws <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.167">addDescriptionLine</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+                           title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)
+                 throws <a href="../exception/arena/create/ArenaNotExistException.html"
+                           title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">新增場地描述</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -616,9 +887,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockListLast">
 <li class="blockList">
 <h4>removeDescriptionLine</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.163">removeDescriptionLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;arena)
-                    throws <a href="../exception/NoMoreElementException.html" title="class in com.ericlam.mc.minigames.core.exception">NoMoreElementException</a>,
-                           <a href="../exception/arena/create/ArenaNotExistException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
+    <pre class="methodSignature">void&nbsp;<a
+            href="../../../../../../src-html/com/ericlam/mc/minigames/core/manager/ArenaCreateManager.html#line.175">removeDescriptionLine</a>&#8203;(<a
+            class="externalLink"
+            href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true"
+            title="class or interface in java.lang">String</a>&nbsp;arena)
+                    throws <a href="../exception/NoMoreElementException.html"
+                              title="class in com.ericlam.mc.minigames.core.exception">NoMoreElementException</a>,
+                           <a href="../exception/arena/create/ArenaNotExistException.html"
+                              title="class in com.ericlam.mc.minigames.core.exception.arena.create">ArenaNotExistException</a></pre>
 <div class="block">刪除上一個場地描述</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

@@ -9,6 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -85,16 +86,28 @@ public interface ArenaCreateManager {
 
     /**
      * 保存場地
+     *
      * @param arena 場地
-     * @return 異步加載
+     * @return 異步保存
      * @throws SetUpNotFinishException 設置尚未完成時
-     * @throws ArenaNotExistException 場地不存在時
+     * @throws ArenaNotExistException  場地不存在時
      * @throws ArenaUnchangedExcpetion 場地沒有被變更時
+     * @throws ArenaNotBackupException 場地尚未備份時
      */
-    CompletableFuture<Boolean> saveArena(String arena) throws SetUpNotFinishException, ArenaNotExistException, ArenaUnchangedExcpetion;
+    CompletableFuture<Boolean> saveArena(String arena) throws SetUpNotFinishException, ArenaNotExistException, ArenaUnchangedExcpetion, ArenaNotBackupException;
+
+
+    /**
+     * @param arena 場地
+     * @return 異步備份地圖
+     * @throws ArenaNotExistException    場地不存在時
+     * @throws BackupNotAllowedException 遊戲場地恢復機制未被啟用時
+     */
+    CompletableFuture<File> backupArena(String arena) throws ArenaNotExistException, BackupNotAllowedException;
 
     /**
      * 獲取場地資訊
+     *
      * @param arena 場地
      * @return 資訊列
      * @throws ArenaNotExistException 場地不存在時
