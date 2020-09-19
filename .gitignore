@@ -2,6 +2,6 @@
 /out/
 /.idea/*
 /Plugin/*
-.idea/*
+.idea
 /minigame-api/target
 /minigame-api/dependency-reduced-pom.xml
