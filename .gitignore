@@ -1,7 +1,0 @@
-# Project exclude paths
-/out/
-/.idea/
-/Plugin/
-.idea
-/minigame-api/target
-/minigame-api/dependency-reduced-pom.xml

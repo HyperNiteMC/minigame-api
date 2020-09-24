@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Minigames-Core">
-    <output-path>W:/Minecraft/2019/HyperNiteMC-2019/GSG/plugins</output-path>
-    <root id="archive" name="Minigames-Core.jar">
-      <element id="module-output" name="Plugin" />
-      <element id="module-output" name="minigame-api" />
-    </root>
-  </artifact>
-</component>

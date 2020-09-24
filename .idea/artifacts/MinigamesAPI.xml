@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="MinigamesAPI">
-    <output-path>$PROJECT_DIR$/../../../Libraries/plugins</output-path>
-    <root id="archive" name="MinigamesAPI.jar">
-      <element id="module-output" name="minigame-api" />
-    </root>
-  </artifact>
-</component>

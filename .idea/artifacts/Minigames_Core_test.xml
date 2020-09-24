@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Minigames-Core-test">
-    <output-path>W:/Minecraft/2019/1.14.4/plugins</output-path>
-    <root id="archive" name="Minigames-Core.jar">
-      <element id="module-output" name="Plugin" />
-      <element id="module-output" name="minigame-api" />
-    </root>
-  </artifact>
-</component>
