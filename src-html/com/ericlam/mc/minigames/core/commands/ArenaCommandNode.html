@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<main role="main">
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span><a id="line.1">package com.ericlam.mc.minigames.core.commands;</a>
+<span class="sourceLineNo">002</span><a id="line.2"></a>
+<span class="sourceLineNo">003</span><a id="line.3">import com.ericlam.mc.minigames.core.arena.Arena;</a>
+<span class="sourceLineNo">004</span><a id="line.4">import com.ericlam.mc.minigames.core.exception.arena.create.ArenaNotExistException;</a>
+<span class="sourceLineNo">005</span><a id="line.5">import com.ericlam.mc.minigames.core.game.GameState;</a>
+<span class="sourceLineNo">006</span><a id="line.6">import com.ericlam.mc.minigames.core.main.MinigamesCore;</a>
+<span class="sourceLineNo">007</span><a id="line.7">import com.ericlam.mc.minigames.core.manager.ArenaCreateManager;</a>
+<span class="sourceLineNo">008</span><a id="line.8">import com.hypernite.mc.hnmc.core.config.MessageGetter;</a>
+<span class="sourceLineNo">009</span><a id="line.9">import com.hypernite.mc.hnmc.core.main.HyperNiteMC;</a>
+<span class="sourceLineNo">010</span><a id="line.10">import com.hypernite.mc.hnmc.core.managers.CoreConfig;</a>
+<span class="sourceLineNo">011</span><a id="line.11">import com.hypernite.mc.hnmc.core.misc.commands.CommandNode;</a>
+<span class="sourceLineNo">012</span><a id="line.12">import org.apache.commons.lang.Validate;</a>
+<span class="sourceLineNo">013</span><a id="line.13">import org.bukkit.command.CommandSender;</a>
+<span class="sourceLineNo">014</span><a id="line.14">import org.bukkit.entity.Player;</a>
+<span class="sourceLineNo">015</span><a id="line.15"></a>
+<span class="sourceLineNo">016</span><a id="line.16">import javax.annotation.Nonnull;</a>
+<span class="sourceLineNo">017</span><a id="line.17">import java.util.Arrays;</a>
+<span class="sourceLineNo">018</span><a id="line.18">import java.util.LinkedList;</a>
+<span class="sourceLineNo">019</span><a id="line.19">import java.util.List;</a>
+<span class="sourceLineNo">020</span><a id="line.20">import java.util.stream.Collectors;</a>
+<span class="sourceLineNo">021</span><a id="line.21"></a>
+<span class="sourceLineNo">022</span><a id="line.22">/**</a>
+<span class="sourceLineNo">023</span><a id="line.23"> * 場地指令接口，用於新增額外場地設置指令是掛接。</a>
+<span class="sourceLineNo">024</span><a id="line.24"> */</a>
+<span class="sourceLineNo">025</span><a id="line.25">public abstract class ArenaCommandNode extends CommandNode {</a>
+<span class="sourceLineNo">026</span><a id="line.26"></a>
+<span class="sourceLineNo">027</span><a id="line.27">    private final MessageGetter messageGetter;</a>
+<span class="sourceLineNo">028</span><a id="line.28"></a>
+<span class="sourceLineNo">029</span><a id="line.29"></a>
+<span class="sourceLineNo">030</span><a id="line.30">    /**</a>
+<span class="sourceLineNo">031</span><a id="line.31">     * @param parent      父指令</a>
+<span class="sourceLineNo">032</span><a id="line.32">     * @param command     指令名稱</a>
+<span class="sourceLineNo">033</span><a id="line.33">     * @param permission  權限</a>
+<span class="sourceLineNo">034</span><a id="line.34">     * @param description 描述</a>
+<span class="sourceLineNo">035</span><a id="line.35">     * @param placeholder 參數</a>
+<span class="sourceLineNo">036</span><a id="line.36">     * @param alias       別稱</a>
+<span class="sourceLineNo">037</span><a id="line.37">     */</a>
+<span class="sourceLineNo">038</span><a id="line.38">    public ArenaCommandNode(CommandNode parent, @Nonnull String command, String permission, @Nonnull String description, String placeholder, String... alias) {</a>
+<span class="sourceLineNo">039</span><a id="line.39">        super(parent, command, permission, description, placeholder, alias);</a>
+<span class="sourceLineNo">040</span><a id="line.40">        messageGetter = MinigamesCore.getProperties().getMessageGetter();</a>
+<span class="sourceLineNo">041</span><a id="line.41">    }</a>
+<span class="sourceLineNo">042</span><a id="line.42"></a>
+<span class="sourceLineNo">043</span><a id="line.43">    @Override</a>
+<span class="sourceLineNo">044</span><a id="line.44">    public boolean executeCommand(@Nonnull CommandSender commandSender, @Nonnull List&lt;String&gt; list) {</a>
+<span class="sourceLineNo">045</span><a id="line.45">        CoreConfig coreConfig = HyperNiteMC.getAPI().getCoreConfig();</a>
+<span class="sourceLineNo">046</span><a id="line.46">        String prefix = MinigamesCore.getApi().getGameManager().getGamePrefix();</a>
+<span class="sourceLineNo">047</span><a id="line.47">        if (!(commandSender instanceof Player)) {</a>
+<span class="sourceLineNo">048</span><a id="line.48">            commandSender.sendMessage(coreConfig.getPrefix() + coreConfig.getNotPlayer());</a>
+<span class="sourceLineNo">049</span><a id="line.49">            return true;</a>
+<span class="sourceLineNo">050</span><a id="line.50">        }</a>
+<span class="sourceLineNo">051</span><a id="line.51"></a>
+<span class="sourceLineNo">052</span><a id="line.52">        Player player = (Player) commandSender;</a>
+<span class="sourceLineNo">053</span><a id="line.53">        final ArenaCreateManager arenaCreateManager = MinigamesCore.getApi().getArenaCreateManager();</a>
+<span class="sourceLineNo">054</span><a id="line.54">        Validate.notNull(arenaCreateManager, "Arena Create Manager is null");</a>
+<span class="sourceLineNo">055</span><a id="line.55"></a>
+<span class="sourceLineNo">056</span><a id="line.56">        if (MinigamesCore.getApi().getGameManager().getGameState() != GameState.STOPPED) {</a>
+<span class="sourceLineNo">057</span><a id="line.57">            player.sendMessage(prefix + messageGetter.getPure("game-not-stopped"));</a>
+<span class="sourceLineNo">058</span><a id="line.58">            return true;</a>
+<span class="sourceLineNo">059</span><a id="line.59">        }</a>
+<span class="sourceLineNo">060</span><a id="line.60"></a>
+<span class="sourceLineNo">061</span><a id="line.61">        try {</a>
+<span class="sourceLineNo">062</span><a id="line.62">            return executeArenaOperation(player, list, arenaCreateManager);</a>
+<span class="sourceLineNo">063</span><a id="line.63">        } catch (ArenaNotExistException e) {</a>
+<span class="sourceLineNo">064</span><a id="line.64">            player.sendMessage(prefix + messageGetter.getPure("arena.not-exist").replace("&lt;arena&gt;", e.getArena()));</a>
+<span class="sourceLineNo">065</span><a id="line.65">            return true;</a>
+<span class="sourceLineNo">066</span><a id="line.66">        }</a>
+<span class="sourceLineNo">067</span><a id="line.67">    }</a>
+<span class="sourceLineNo">068</span><a id="line.68"></a>
+<span class="sourceLineNo">069</span><a id="line.69">    @Override</a>
+<span class="sourceLineNo">070</span><a id="line.70">    public List&lt;String&gt; executeTabCompletion(@Nonnull CommandSender commandSender, @Nonnull List&lt;String&gt; list) {</a>
+<span class="sourceLineNo">071</span><a id="line.71">        if (this.getPlaceholder() == null) return null;</a>
+<span class="sourceLineNo">072</span><a id="line.72">        String[] placeholders = Arrays.stream(this.getPlaceholder().split(" ")).map(l -&gt; l.replace("&lt;", "").replace("&gt;", "").replace("[", "").replace("]", "")).toArray(String[]::new);</a>
+<span class="sourceLineNo">073</span><a id="line.73">        List&lt;Integer&gt; arenaTab = new LinkedList&lt;&gt;();</a>
+<span class="sourceLineNo">074</span><a id="line.74">        List&lt;Integer&gt; warpTab = new LinkedList&lt;&gt;();</a>
+<span class="sourceLineNo">075</span><a id="line.75">        for (int i = 0; i &lt; placeholders.length; i++) {</a>
+<span class="sourceLineNo">076</span><a id="line.76">            final String var = placeholders[i];</a>
+<span class="sourceLineNo">077</span><a id="line.77">            if (var.equalsIgnoreCase("arena")) {</a>
+<span class="sourceLineNo">078</span><a id="line.78">                arenaTab.add(i);</a>
+<span class="sourceLineNo">079</span><a id="line.79">            } else if (var.equalsIgnoreCase("warp")) {</a>
+<span class="sourceLineNo">080</span><a id="line.80">                warpTab.add(i);</a>
+<span class="sourceLineNo">081</span><a id="line.81">            }</a>
+<span class="sourceLineNo">082</span><a id="line.82">        }</a>
+<span class="sourceLineNo">083</span><a id="line.83">        final ArenaCreateManager arenaCreateManager = MinigamesCore.getApi().getArenaCreateManager();</a>
+<span class="sourceLineNo">084</span><a id="line.84">        Validate.notNull(arenaCreateManager, "Arena Create Manager is null");</a>
+<span class="sourceLineNo">085</span><a id="line.85">        final int index = list.size() - 1;</a>
+<span class="sourceLineNo">086</span><a id="line.86">        if (arenaTab.contains(index)) {</a>
+<span class="sourceLineNo">087</span><a id="line.87">            return arenaCreateManager.getArenaList().stream().map(Arena::getArenaName).collect(Collectors.toList());</a>
+<span class="sourceLineNo">088</span><a id="line.88">        } else if (warpTab.contains(index)) {</a>
+<span class="sourceLineNo">089</span><a id="line.89">            final int arenaIndex = index - 1;</a>
+<span class="sourceLineNo">090</span><a id="line.90">            if (placeholders.length &gt; arenaIndex &amp;&amp; placeholders[arenaIndex].equalsIgnoreCase("arena")) {</a>
+<span class="sourceLineNo">091</span><a id="line.91">                try {</a>
+<span class="sourceLineNo">092</span><a id="line.92">                    return arenaCreateManager.getWarpList(list.get(arenaIndex));</a>
+<span class="sourceLineNo">093</span><a id="line.93">                } catch (ArenaNotExistException ignored) {</a>
+<span class="sourceLineNo">094</span><a id="line.94">                }</a>
+<span class="sourceLineNo">095</span><a id="line.95">            }</a>
+<span class="sourceLineNo">096</span><a id="line.96">        }</a>
+<span class="sourceLineNo">097</span><a id="line.97">        return null;</a>
+<span class="sourceLineNo">098</span><a id="line.98">    }</a>
+<span class="sourceLineNo">099</span><a id="line.99"></a>
+<span class="sourceLineNo">100</span><a id="line.100">    /**</a>
+<span class="sourceLineNo">101</span><a id="line.101">     * 指令運行</a>
+<span class="sourceLineNo">102</span><a id="line.102">     *</a>
+<span class="sourceLineNo">103</span><a id="line.103">     * @param player             指令發送者</a>
+<span class="sourceLineNo">104</span><a id="line.104">     * @param list               參數</a>
+<span class="sourceLineNo">105</span><a id="line.105">     * @param arenaCreateManager 場地設置管理器</a>
+<span class="sourceLineNo">106</span><a id="line.106">     * @return 執行成功</a>
+<span class="sourceLineNo">107</span><a id="line.107">     * @throws ArenaNotExistException 場地不存在</a>
+<span class="sourceLineNo">108</span><a id="line.108">     */</a>
+<span class="sourceLineNo">109</span><a id="line.109">    protected abstract boolean executeArenaOperation(@Nonnull Player player, @Nonnull List&lt;String&gt; list, @Nonnull ArenaCreateManager arenaCreateManager) throws ArenaNotExistException;</a>
+<span class="sourceLineNo">110</span><a id="line.110"></a>
+<span class="sourceLineNo">111</span><a id="line.111"></a>
+<span class="sourceLineNo">112</span><a id="line.112">}</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</main>
+</body>
+</html>
