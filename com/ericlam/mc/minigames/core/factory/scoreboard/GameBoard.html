@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -213,6 +213,20 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">根據玩家目前狀態切換計分版隊伍</div>
 </td>
 </tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateIndividual()">updateIndividual</a></span>()</code></th>
+<td class="colLast">
+<div class="block">更新所有玩家的個人所屬顯示</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateIndividual(com.ericlam.mc.minigames.core.character.GamePlayer)">updateIndividual</a></span>&#8203;(<a href="../../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)</code></th>
+<td class="colLast">
+<div class="block">更新特定玩家的個人所屬顯示</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -350,13 +364,37 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
+<a id="updateIndividual(com.ericlam.mc.minigames.core.character.GamePlayer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateIndividual</h4>
+<pre class="methodSignature">void&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#line.76">updateIndividual</a>&#8203;(<a href="../../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>&nbsp;player)</pre>
+<div class="block">更新特定玩家的個人所屬顯示</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>player</code> - 玩家</dd>
+</dl>
+</li>
+</ul>
+<a id="updateIndividual()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateIndividual</h4>
+<pre class="methodSignature">void&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#line.81">updateIndividual</a>()</pre>
+<div class="block">更新所有玩家的個人所屬顯示</div>
+</li>
+</ul>
 <a id="destroy()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>destroy</h4>
-<pre class="methodSignature">void&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#line.75">destroy</a>()</pre>
+<pre class="methodSignature">void&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#line.86">destroy</a>()</pre>
 <div class="block">銷毀計分版，此動作將無法復原。</div>
 </li>
 </ul>

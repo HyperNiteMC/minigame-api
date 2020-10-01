@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,7 +128,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="../Factory.html" title="interface in com.ericlam.mc.minigames.core.factory">Factory</a>&lt;<a href="GameBoard.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">GameBoard</a>&gt;</code></dd>
 </dl>
 <hr>
-<pre>public interface <a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.10">ScoreboardFactory</a>
+<pre>public interface <a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.13">ScoreboardFactory</a>
 extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.core.factory">Factory</a>&lt;<a href="GameBoard.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">GameBoard</a>&gt;</pre>
 <div class="block">計分版工廠</div>
 </li>
@@ -161,13 +161,22 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addLine(java.lang.String,int,java.util.function.BiFunction)">addLine</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+       int&nbsp;score,
+       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;applier)</code></th>
+<td class="colLast">
+<div class="block">添加個人的計分版內容(每個玩家顯示的文字都不同)</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addSetting(org.bukkit.scoreboard.Team.Option,org.bukkit.scoreboard.Team.OptionStatus)">addSetting</a></span>&#8203;(<a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.Option.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.Option</a>&nbsp;option,
           <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.OptionStatus.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.OptionStatus</a>&nbsp;status)</code></th>
 <td class="colLast">
 <div class="block">添加全局設定</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addTeamSetting(com.ericlam.mc.minigames.core.game.GameTeam,org.bukkit.scoreboard.Team.Option,org.bukkit.scoreboard.Team.OptionStatus)">addTeamSetting</a></span>&#8203;(<a href="../../game/GameTeam.html" title="interface in com.ericlam.mc.minigames.core.game">GameTeam</a>&nbsp;gameTeam,
               <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.Option.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.Option</a>&nbsp;option,
@@ -176,7 +185,7 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <div class="block">添加隊伍設定</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLine(java.lang.String,java.lang.String,int)">setLine</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
@@ -185,11 +194,18 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <div class="block">設置計分版內容</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTitle(java.lang.String)">setTitle</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;title)</code></th>
 <td class="colLast">
 <div class="block">設置計分版標題, 支援顏色代碼</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUpdateInterval(long)">setUpdateInterval</a></span>&#8203;(long&nbsp;ticks)</code></th>
+<td class="colLast">
+<div class="block">個人計分版內容更新頻率，默認為10秒, 最低為 10 ticks</div>
 </td>
 </tr>
 </table>
@@ -222,7 +238,7 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <ul class="blockList">
 <li class="blockList">
 <h4>addTeamSetting</h4>
-<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.20">addTeamSetting</a>&#8203;(<a href="../../game/GameTeam.html" title="interface in com.ericlam.mc.minigames.core.game">GameTeam</a>&nbsp;gameTeam,
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.23">addTeamSetting</a>&#8203;(<a href="../../game/GameTeam.html" title="interface in com.ericlam.mc.minigames.core.game">GameTeam</a>&nbsp;gameTeam,
                                  <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.Option.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.Option</a>&nbsp;option,
                                  <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.OptionStatus.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.OptionStatus</a>&nbsp;status)</pre>
 <div class="block">添加隊伍設定</div>
@@ -242,7 +258,7 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <ul class="blockList">
 <li class="blockList">
 <h4>addSetting</h4>
-<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.31">addSetting</a>&#8203;(<a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.Option.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.Option</a>&nbsp;option,
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.34">addSetting</a>&#8203;(<a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.Option.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.Option</a>&nbsp;option,
                              <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/scoreboard/Team.OptionStatus.html?is-external=true" title="class or interface in org.bukkit.scoreboard" class="externalLink">Team.OptionStatus</a>&nbsp;status)</pre>
 <div class="block">添加全局設定
  <p>
@@ -262,7 +278,7 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <ul class="blockList">
 <li class="blockList">
 <h4>setTitle</h4>
-<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.39">setTitle</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;title)</pre>
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.42">setTitle</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;title)</pre>
 <div class="block">設置計分版標題, 支援顏色代碼</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -278,7 +294,7 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <ul class="blockList">
 <li class="blockList">
 <h4>setLine</h4>
-<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.49">setLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.52">setLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
                           int&nbsp;score)</pre>
 <div class="block">設置計分版內容</div>
@@ -295,16 +311,52 @@ extends <a href="../Factory.html" title="interface in com.ericlam.mc.minigames.c
 <a id="addLine(java.lang.String,int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addLine</h4>
-<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.58">addLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.61">addLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
                           int&nbsp;score)</pre>
 <div class="block">添加計分版內容而不標識文字</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>text</code> - 文字, 支援顏色</dd>
 <dd><code>score</code> - 分數</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+</dl>
+</li>
+</ul>
+<a id="addLine(java.lang.String,int,java.util.function.BiFunction)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLine</h4>
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.71">addLine</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
+                          int&nbsp;score,
+                          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/BiFunction.html?is-external=true" title="class or interface in java.util.function" class="externalLink">BiFunction</a>&lt;<a href="../../character/GamePlayer.html" title="interface in com.ericlam.mc.minigames.core.character">GamePlayer</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;applier)</pre>
+<div class="block">添加個人的計分版內容(每個玩家顯示的文字都不同)</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>text</code> - 標識文字, 支援顏色</dd>
+<dd><code>score</code> - 分數</dd>
+<dd><code>applier</code> - 根據 玩家 和 標識文字 最後產生的 顯示文字</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+</dl>
+</li>
+</ul>
+<a id="setUpdateInterval(long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setUpdateInterval</h4>
+<pre class="methodSignature"><a href="ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a>&nbsp;<a href="../../../../../../../src-html/com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#line.78">setUpdateInterval</a>&#8203;(long&nbsp;ticks)</pre>
+<div class="block">個人計分版內容更新頻率，默認為10秒, 最低為 10 ticks</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ticks</code> - 更新頻率</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this</dd>
 </dl>

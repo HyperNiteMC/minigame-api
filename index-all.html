@@ -130,6 +130,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">添加計分版內容而不標識文字</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#addLine(java.lang.String,int,java.util.function.BiFunction)">addLine(String, int, BiFunction&lt;GamePlayer, String, String&gt;)</a></span> - Method in interface com.ericlam.mc.minigames.core.factory.scoreboard.<a href="com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></dt>
+<dd>
+<div class="block">添加個人的計分版內容(每個玩家顯示的文字都不同)</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/arena/CreateArena.html#addLocation(java.lang.String,org.bukkit.Location,int)">addLocation(String, Location, int)</a></span> - Method in interface com.ericlam.mc.minigames.core.arena.<a href="com/ericlam/mc/minigames/core/arena/CreateArena.html" title="interface in com.ericlam.mc.minigames.core.arena">CreateArena</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/manager/GameStatsManager.html#addPlayed(com.ericlam.mc.minigames.core.character.GamePlayer,int)">addPlayed(GamePlayer, int)</a></span> - Method in interface com.ericlam.mc.minigames.core.manager.<a href="com/ericlam/mc/minigames/core/manager/GameStatsManager.html" title="interface in com.ericlam.mc.minigames.core.manager">GameStatsManager</a></dt>
@@ -1584,6 +1588,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">設置追蹤範圍</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html#setUpdateInterval(long)">setUpdateInterval(long)</a></span> - Method in interface com.ericlam.mc.minigames.core.factory.scoreboard.<a href="com/ericlam/mc/minigames/core/factory/scoreboard/ScoreboardFactory.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">ScoreboardFactory</a></dt>
+<dd>
+<div class="block">個人計分版內容更新頻率，默認為10秒, 最低為 10 ticks</div>
+</dd>
 <dt><a href="com/ericlam/mc/minigames/core/exception/arena/create/SetUpNotFinishException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create"><span class="typeNameLink">SetUpNotFinishException</span></a> - Exception in <a href="com/ericlam/mc/minigames/core/exception/arena/create/package-summary.html">com.ericlam.mc.minigames.core.exception.arena.create</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/exception/arena/create/SetUpNotFinishException.html#%3Cinit%3E(java.lang.String)">SetUpNotFinishException(String)</a></span> - Constructor for exception com.ericlam.mc.minigames.core.exception.arena.create.<a href="com/ericlam/mc/minigames/core/exception/arena/create/SetUpNotFinishException.html" title="class in com.ericlam.mc.minigames.core.exception.arena.create">SetUpNotFinishException</a></dt>
@@ -1675,6 +1683,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/manager/LobbyManager.html#unVote(com.ericlam.mc.minigames.core.character.GamePlayer)">unVote(GamePlayer)</a></span> - Method in interface com.ericlam.mc.minigames.core.manager.<a href="com/ericlam/mc/minigames/core/manager/LobbyManager.html" title="interface in com.ericlam.mc.minigames.core.manager">LobbyManager</a></dt>
 <dd>
 <div class="block">取消玩家投票</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#updateIndividual()">updateIndividual()</a></span> - Method in interface com.ericlam.mc.minigames.core.factory.scoreboard.<a href="com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">GameBoard</a></dt>
+<dd>
+<div class="block">更新所有玩家的個人所屬顯示</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html#updateIndividual(com.ericlam.mc.minigames.core.character.GamePlayer)">updateIndividual(GamePlayer)</a></span> - Method in interface com.ericlam.mc.minigames.core.factory.scoreboard.<a href="com/ericlam/mc/minigames/core/factory/scoreboard/GameBoard.html" title="interface in com.ericlam.mc.minigames.core.factory.scoreboard">GameBoard</a></dt>
+<dd>
+<div class="block">更新特定玩家的個人所屬顯示</div>
 </dd>
 </dl>
 <a id="I:V">
